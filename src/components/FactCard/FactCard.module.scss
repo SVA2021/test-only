@@ -1,8 +1,7 @@
-@import '../../styles/_variables.scss';
+@import '../../styles/mixins';
+@import '../../styles/variables';
 
 .card {
-    // width: 320px;
-    // height: 135px;
     overflow: hidden;
 }
 
@@ -14,6 +13,10 @@
     line-height: 120%;
     text-transform: uppercase;
     color: $blue;
+
+    @include mobile {
+        font-size: 16px;
+    }
 }
 
 .card__text {
@@ -27,4 +30,9 @@
     font-size: 20px;
     line-height: 30px;
     color: $blackblue;
+
+    @include mobile {
+        font-size: 14px;
+        line-height: 145%;
+    }
 }

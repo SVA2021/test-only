@@ -1,4 +1,5 @@
-@import '../../styles/_variables.scss';
+@import '../../styles/mixins';
+@import '../../styles/variables';
 
 .header {
     position: relative;
@@ -18,5 +19,14 @@
         height: 120px;
         width: 5px;
         background: linear-gradient(180deg, $blue 5%, $pink 85%);
+    }
+
+    @include mobile {
+        width: 123px;
+        font-size: 20px;
+
+        &::before {
+            content: none;
+        }
     }
 }

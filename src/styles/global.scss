@@ -22,14 +22,3 @@ a {
 * {
 	box-sizing: border-box;
 }
-
-.container {
-	position: relative;
-	padding: 170px 80px 104px 80px;
-	width: $mq-xl;
-	height: 100vh;
-	margin: 0 auto;
-	border-left: 1px solid rgba($blackblue , 0.1);
-	border-right: 1px solid rgba($blackblue , 0.1);
-	color: $blackblue;
-}

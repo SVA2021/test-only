@@ -1,15 +1,36 @@
-@import '../../styles/_variables.scss';
+@import '../../styles/mixins';
+@import '../../styles/variables';
 
 .mySwiper {
     width: 100%;
 
+    @include mobile {
+        padding-top: 20px;
+        padding-bottom: 100px;
+        border-top: 1px solid #C7CDD9;
+    }
+
     .mySwiper__slide {
         width: 320px;
         height: 135px;
+
+        @include mobile {
+            width: 166px;
+            font-size: 14px;
+            line-height: 145%;
+        }
     }
 
     .mySwiper__slide.swiper-slide-next {
         width: 400px;
+
+        @include mobile {
+            width: 166px;
+
+            &:not(:last-child) {
+                opacity: 0.4;
+            }
+        }
     }
 
     .swiper-button-disabled {
@@ -36,6 +57,10 @@
             background: #FFF;
             border-radius: 50%;
             box-shadow: 0px 0px 15px rgba(56, 119, 238, 0.1);
+        }
+
+        @include mobile {
+            display: none;
         }
     }
 

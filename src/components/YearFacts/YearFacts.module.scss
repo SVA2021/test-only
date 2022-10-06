@@ -1,4 +1,5 @@
-@import '../../styles/_variables.scss';
+@import '../../styles/mixins';
+@import '../../styles/variables';
 
 .wrapper {
 	position: relative;
@@ -19,7 +20,7 @@
 		left: 50%;
 		border-right: 1px solid rgba($blackblue , 0.1);
 	}
-	
+
 	&::before {
 		content: '';
 		position: absolute;
@@ -29,36 +30,58 @@
 		left: 0;
 		border-top: 1px solid rgba($blackblue , 0.1);
 	}
+
+	@include mobile {
+		width: $mq-xs;
+		border: none;
+		height: auto;
+		padding: 59px 20px 20px 20px;
+
+		&::after,
+		&::before {
+			border: none;
+		}
+	}
 }
 
 .swiper {
-    margin-top: 56px;
+	margin-top: 56px;
 }
 
 .years {
-    position: relative;
-    margin: 96px auto;
-    margin-bottom: 137px;
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 200px;
-    line-height: 160px;
+	position: relative;
+	margin: 96px auto;
+	margin-bottom: 137px;
+	font-family: 'PT Sans';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 200px;
+	line-height: 160px;
 
-    text-align: center;
-    letter-spacing: -0.02em;
+	text-align: center;
+	letter-spacing: -0.02em;
 
-    .years_start {
-        margin-right: 0.5em;
-        color: $blue;
-    }
+	@include mobile {
+		font-size: 56px;
+		line-height: 72px;
+		margin: 56px auto;
+	}
 
-    .years_end {
-        color: $pink;
-    }
+	.years_start {
+		margin-right: 0.5em;
+		color: $blue;
+	}
+
+	.years_end {
+		color: $pink;
+	}
 
 }
 
 .circle {
 	position: relative;
+
+	@include mobile {
+		display: none;
+	}
 }

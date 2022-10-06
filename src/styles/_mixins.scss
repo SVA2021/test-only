@@ -2,7 +2,7 @@
 
 // mobile devices
 @mixin mobile {
-  @media ( max-width: $mq-xs ) {
+  @media ( max-width: $mq-xl ) {
     @content;
   }
 }

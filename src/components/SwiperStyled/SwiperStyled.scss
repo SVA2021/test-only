@@ -1,0 +1,50 @@
+@import '../../styles/_variables.scss';
+
+.mySwiper {
+    width: 100%;
+
+    .mySwiper__slide {
+        width: 320px;
+        height: 135px;
+    }
+
+    .mySwiper__slide.swiper-slide-next {
+        width: 400px;
+    }
+
+    .swiper-button-disabled {
+        display: none;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        height: 100%;
+        width: 60px;
+        margin-top: 0;
+        top: 0;
+        background-color: $light;
+        padding: 0 10px;
+
+        &::after {
+            display: block;
+            width: 40px;
+            height: 40px;
+            font-size: 12px;
+            font-weight: 900;
+            line-height: 40px;
+            text-align: center;
+            background: #FFF;
+            border-radius: 50%;
+            box-shadow: 0px 0px 15px rgba(56, 119, 238, 0.1);
+        }
+    }
+
+    .swiper-button-prev {
+        left: 0;
+    }
+
+    .swiper-button-next {
+        right: 0;
+    }
+
+}

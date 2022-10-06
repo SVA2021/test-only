@@ -1,0 +1,64 @@
+@import '../../styles/_variables.scss';
+
+.wrapper {
+	position: relative;
+	padding: 170px 80px 104px 80px;
+	width: $mq-xl;
+	height: 100vh;
+	margin: 0 auto;
+	border-left: 1px solid rgba($blackblue , 0.1);
+	border-right: 1px solid rgba($blackblue , 0.1);
+	color: $blackblue;
+
+	&::after {
+		content: '';
+		position: absolute;
+		height: 100vh;
+		width: 0;
+		top: 0;
+		left: 50%;
+		border-right: 1px solid rgba($blackblue , 0.1);
+	}
+	
+	&::before {
+		content: '';
+		position: absolute;
+		height: 0;
+		width: 100%;
+		top: 480px;
+		left: 0;
+		border-top: 1px solid rgba($blackblue , 0.1);
+	}
+}
+
+.swiper {
+    margin-top: 56px;
+}
+
+.years {
+    position: relative;
+    margin: 96px auto;
+    margin-bottom: 137px;
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 200px;
+    line-height: 160px;
+
+    text-align: center;
+    letter-spacing: -0.02em;
+
+    .years_start {
+        margin-right: 0.5em;
+        color: $blue;
+    }
+
+    .years_end {
+        color: $pink;
+    }
+
+}
+
+.circle {
+	position: relative;
+}

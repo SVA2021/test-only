@@ -1,0 +1,22 @@
+@import '../../styles/_variables.scss';
+
+.header {
+    position: relative;
+    width: 353px;
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 120%;
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: -78px;
+        transform: translateY(-50%);
+        height: 120px;
+        width: 5px;
+        background: linear-gradient(180deg, $blue 5%, $pink 85%);
+    }
+}
